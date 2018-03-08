@@ -38,4 +38,4 @@ You can also use it as a library.
 Why?
 ====
 
-JSON Graph is great. I just wanted an easier way to read it for debugging perposes.
+JSON Graph is great. I just wanted an easier way to read it for debugging purposes.
