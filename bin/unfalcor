@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+const unfalcor = require('../src');
+const process = require('process');
+const fileName = process.argv[2];
+const getStdin = require('get-stdin');
+
+if (fileName) {
+    const fs = require('fs');
+    fs.readFile(process.argv[2], (err, content) => {
+        if (err) {
+            console.log(`Failed to read from file ${err.message}`, err);
+            process.exit(2);
+        }
+        run(content);
+    });
+} else {
+    getStdin().then((content) => {
+        if (!content) {
+            console.log('You must provide either a JSON file from stdin or a file that can be read as JSON');
+            process.exit(1);
+        }
+        run(content); 
+    });
+}
+
+const run = (content) => {
+    try {
+    content = JSON.parse(content);
+    } catch (err) {
+        console.log('Failed to decode content. Error: ', err);
+        process.exit(3);
+        
+    }
+
+    const result = unfalcor(content);
+    console.log(JSON.stringify(result, null, 2));
+};

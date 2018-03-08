@@ -1,0 +1,166 @@
+{
+    "test": {
+        "$__path": [
+            "test"
+        ],
+        "list": {
+            "$__path": [
+                "test",
+                "list"
+            ],
+            "length": 2,
+            "0": {
+                "$__path": [
+                    "test",
+                    "list",
+                    "0"
+                ],
+                "thing": {
+                    "$__path": [
+                        "test",
+                        "list",
+                        "0",
+                        "thing"
+                    ],
+                    "type": "atom",
+                    "value": "hello",
+                    "$expires": 1
+                },
+                "thing2": {
+                    "$__path": [
+                        "test",
+                        "list",
+                        "1",
+                        "thing2"
+                    ],
+                    "type": "atom",
+                    "value": "thing2_hello",
+                    "$expires": 1
+                }
+            },
+            "1": {
+                "$__path": [
+                    "test",
+                    "list",
+                    "1"
+                ],
+                "thing": {
+                    "$__path": [
+                        "test",
+                        "list",
+                        "1",
+                        "thing"
+                    ],
+                    "type": "atom",
+                    "value": "hello_1",
+                    "$expires": 1
+                },
+                "thing2": {
+                    "$__path": [
+                        "test",
+                        "list",
+                        "1",
+                        "thing2"
+                    ],
+                    "type": "atom",
+                    "value": "thing2_hello_1",
+                    "$expires": 1
+                }
+            }
+        }
+    },
+    "object": {
+        "$__path": [
+            "test",
+            "object"
+        ],
+        "obj1": {
+            "$__path": [
+                "test",
+                "object",
+                "obj1"
+            ],
+            "type": "atom",
+            "value": "obj1",
+            "$expires": 1
+        },
+        "obj2": {
+            "$__path": [
+                "test",
+                "object",
+                "obj2"
+            ],
+            "type": "atom",
+            "value": "obj2",
+            "$expires": 1
+        }
+    },
+    "nested": {
+        "$__path": [
+            "test",
+            "nested"
+        ],
+        "length": "1",
+        "0": {
+            "$__path": [
+                "test",
+                "nested",
+                "0"
+            ],
+            "obj": {
+                "$__path": [
+                    "test",
+                    "nested",
+                    "0",
+                    "obj"
+                ],
+                "someArray": {
+                    "$__path": [
+                        "test",
+                        "nested",
+                        "0",
+                        "obj",
+                        "someArray"
+                    ],
+                    "length": "1",
+                    "0": {
+                        "$__path": [
+                            "test",
+                            "nested",
+                            "0",
+                            "obj",
+                            "someArray",
+                            "0"
+                        ],
+                        "someNestedProp": {
+                            "$__path": [
+                                "test",
+                                "nested",
+                                "0",
+                                "obj",
+                                "someArray",
+                                "0",
+                                "someNestedProp"
+                            ],
+                            "prop": {
+                                "$__path": [
+                                    "test",
+                                    "nested",
+                                    "0",
+                                    "obj",
+                                    "someArray",
+                                    "0",
+                                    "someNestedProp",
+                                    "prop"
+                                ],
+                                "type": "atom",
+                                "value": "hurray",
+                                "$expires": 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

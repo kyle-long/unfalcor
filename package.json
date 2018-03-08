@@ -1,0 +1,18 @@
+{
+  "name": "unfalcor",
+  "version": "0.0.1",
+  "description": "A tiny library for making falcor data (JSON Graph) more readable for debugging",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "bin": {
+    "unfalcor": "./bin/unfalcor"
+  },
+  "devDependencies": {
+    "jest": "^22.4.2"
+  },
+  "dependencies": {
+    "get-stdin": "^6.0.0"
+  }
+}
