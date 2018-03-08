@@ -52,7 +52,7 @@ const isArray = (thing) => {
 };
 
 const isLeaf = (obj) => {
-    return obj.type === 'atom';
+    return obj.$type === 'atom';
 };
 
 module.exports = unfalcor;

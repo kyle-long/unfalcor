@@ -7,12 +7,13 @@ describe('index', () => {
             "test": {
                 "list": [
                     {
-                    "thing": "hello",
-                    "thing2": "thing2_hello"
+                        "thing": "hello",
+                        "thing2": "thing2_hello",
+                        "thing3": null
                     },
                     {
-                    "thing": "hello_1",
-                    "thing2": "thing2_hello_1"
+                        "thing": "hello_1",
+                        "thing2": "thing2_hello_1"
                     }
                 ]
             },
