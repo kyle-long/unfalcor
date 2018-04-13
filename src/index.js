@@ -4,16 +4,27 @@ const unfalcor = (graph) => {
     return handleSwitch(graph);
 };
 
+const handleValue = (result, key, val) => {
+    const convertedVal = handleSwitch(val);
+
+    if (convertedVal !== undefined) {
+        result[key] = convertedVal;
+    }
+};
+
 const handleObject = (obj) => {
     const result = {};
 
     Object.keys(obj).forEach((key) => {
         if (key !== PATH) {
             const val = obj[key];
-
-            result[key] = handleSwitch(val);
+            handleValue(result, key, val);
         }
     });
+
+    if (Object.keys(result).length < 1) {
+        return undefined;
+    }
 
     return result;
 };
@@ -26,10 +37,13 @@ const handleArray = (arr) => {
 
         if (!isNaN(index)) {
             const val = arr[key];
-
-            result[index] = handleSwitch(val);
+            handleValue(result, key, val);
         }
     });
+
+    if (result.length < 1) {
+        return undefined;
+    }
 
     return result;
 };

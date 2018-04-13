@@ -174,5 +174,72 @@
                 }
             }
         }
+    },
+    "empty": {
+        "$__path": [
+            "empty",
+            "nested"
+        ],
+        "length": "1",
+        "0": {
+            "$__path": [
+                "empty",
+                "nested",
+                "0"
+            ],
+            "obj": {
+                "$__path": [
+                    "empty",
+                    "nested",
+                    "0",
+                    "obj"
+                ],
+                "someArray": {
+                    "$__path": [
+                        "empty",
+                        "nested",
+                        "0",
+                        "obj",
+                        "someArray"
+                    ],
+                    "length": "1",
+                    "0": {
+                        "$__path": [
+                            "empty",
+                            "nested",
+                            "0",
+                            "obj",
+                            "someArray",
+                            "0"
+                        ],
+                        "someNestedProp": {
+                            "$__path": [
+                                "empty",
+                                "nested",
+                                "0",
+                                "obj",
+                                "someArray",
+                                "0",
+                                "someNestedProp"
+                            ],
+                            "prop": {
+                                "$__path": [
+                                    "empty",
+                                    "nested",
+                                    "0",
+                                    "obj",
+                                    "someArray",
+                                    "0",
+                                    "someNestedProp",
+                                    "prop"
+                                ],
+                                "$type": "atom",
+                                "$expires": 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
