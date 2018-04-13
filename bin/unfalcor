@@ -26,11 +26,10 @@ if (fileName) {
 
 const run = (content) => {
     try {
-    content = JSON.parse(content);
+        content = JSON.parse(content);
     } catch (err) {
         console.log('Failed to decode content. Error: ', err);
         process.exit(3);
-        
     }
 
     const result = unfalcor(content);

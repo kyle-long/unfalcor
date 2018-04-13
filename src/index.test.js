@@ -37,6 +37,5 @@ describe('index', () => {
         };
 
         expect(unfalcor(data1)).toEqual(expected);
-
     });
 });
