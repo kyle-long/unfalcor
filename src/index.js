@@ -13,14 +13,14 @@ const handleValue = (result, key, val) => {
 };
 
 const handleObject = (obj) => {
-    const result = {};
-
-    Object.keys(obj).forEach((key) => {
+    const result = Object.keys(obj).reduce((accumulator, key) => {
         if (key !== PATH) {
             const val = obj[key];
-            handleValue(result, key, val);
+            handleValue(accumulator, key, val);
         }
-    });
+
+        return accumulator;
+    }, {});
 
     if (Object.keys(result).length < 1) {
         return undefined;
@@ -30,16 +30,17 @@ const handleObject = (obj) => {
 };
 
 const handleArray = (arr) => {
-    const result = [];
-
-    Object.keys(arr).forEach((key) => {
+    const result = Object.keys(arr).reduce((accumulator, key) => {
         const index = parseInt(key, 10);
 
         if (!isNaN(index)) {
             const val = arr[key];
-            handleValue(result, key, val);
+            handleValue(accumulator, key, val);
         }
-    });
+
+        return accumulator;
+
+    }, []);
 
     if (result.length < 1) {
         return undefined;
