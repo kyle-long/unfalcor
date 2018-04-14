@@ -39,7 +39,6 @@ const handleArray = (arr) => {
         }
 
         return accumulator;
-
     }, []);
 
     if (result.length < 1) {
