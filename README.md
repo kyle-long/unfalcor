@@ -8,9 +8,7 @@ Silly debug utility that takes some of the fluff out of JSON Graph
 Install
 =======
 
-For now...
-
-    npm install -g https://github.com/kyle-long/unfalcor
+    npm install -g unfalcor
 
 
 Usage
